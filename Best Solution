@@ -1,0 +1,14 @@
+int trailingZeroes(int n)
+    {
+        int ans = 0;
+        int flag = n/5;
+        
+        for(long long int div = 5; flag != 0; )
+        {
+            ans = ans + flag;
+            div *= 5;
+            flag = n/div;
+        }
+        
+        return ans;
+    }
